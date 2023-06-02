@@ -939,7 +939,7 @@
         $("#notification-container").hide();
         $("#contact-form").on("submit", (event) => {
           event.preventDefault();
-          $("#notification-container").fadeIn(3000).fadeOut(1000);
+          $("#notification-container").fadeIn(3000).delay(1000).fadeOut(1000);
         });
         $("#close-notif-btn").click((event) => {
           $("#notification-container").hide('fast');
