@@ -55,7 +55,7 @@
       .menu-guied-container {
         position: fixed;
         top: 50vh;
-        right: 50px;
+        right: 25px;
         display: block;
       }
       .menu-guied-container a {
@@ -73,6 +73,11 @@
       .menu-guied-item:hover {
         outline: 2px solid #d9d9d9;
         border: 3px solid #000;
+      }
+      @media only screen and (max-width: 1000px) {
+        .menu-guied-container {
+        right: 0px;
+      }
       }
     </style>
   </head>
