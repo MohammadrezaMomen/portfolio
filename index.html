@@ -37,7 +37,7 @@
         left: 15px;
         bottom: 10px;
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
         align-items: center;
         background-color: #94ffb9;
         color: #222222 !important;
@@ -47,10 +47,32 @@
         padding-right: 8px;
       }
       .text-field {
-         white-space: pre-line;
-         word-wrap: break-word;
-         max-width: 100%;
-         overflow: auto;
+        white-space: pre-line;
+        word-wrap: break-word;
+        max-width: 100%;
+        overflow: auto;
+      }
+      .menu-guied-container {
+        position: fixed;
+        top: 50vh;
+        right: 50px;
+        display: block;
+      }
+      .menu-guied-container a {
+        display: block !important;
+      }
+      .menu-guied-item {
+        display: block !important;
+        width: 12px !important;
+        height: 12px !important;
+        background-color: #d9d9d7;
+        margin: 10px 0px;
+        border-radius: 50%;
+        transition: all ease-in 0.1s;
+      }
+      .menu-guied-item:hover {
+        outline: 2px solid #d9d9d9;
+        border: 3px solid #000;
       }
     </style>
   </head>
@@ -65,6 +87,16 @@
       id="ftco-navbar"
     >
       <div class="container">
+        <div class="menu-guied-container">
+          <a href="#home-section"><span class="menu-guied-item"></span></a>
+          <a href="#about-section"><span class="menu-guied-item"></span></a>
+          <a href="#resume-section"><span class="menu-guied-item"></span></a>
+          <a href="#services-section"><span class="menu-guied-item"></span></a>
+          <a href="#skills-section"><span class="menu-guied-item"></span></a>
+          <a href="#projects-section"><span class="menu-guied-item"></span></a>
+          <a href="#blog-section"><span class="menu-guied-item"></span></a>
+          <a href="#contact-section"><span class="menu-guied-item"></span></a>
+        </div>
         <button
           class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle"
           type="button"
@@ -74,7 +106,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="oi oi-menu"></span> فهرست
+          <span class="oi oi-menu mt-3 mb-5"></span> فهرست
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav nav m-auto">
@@ -181,7 +213,8 @@
                     <span>KhorasanRazavi, Mashhad IRAN</span>
                   </li>
                   <li class="d-flex">
-                    <span>ایمیل:</span> <span class="text-field">Mohammadrez78051@gmail.com</span>
+                    <span>ایمیل:</span>
+                    <span class="text-field">Mohammadrez78051@gmail.com</span>
                   </li>
                   <li class="d-flex">
                     <span>موبایل: </span> <span>09379358140</span>
@@ -766,7 +799,9 @@
                   ></span>
                   <div class="d-block text-field pt-4 pr-3">
                     <h5 class="text-field text-gray">ایمل من</h5>
-                    <a class="text-field" href="mailto:Mohammadrez78051@gmail.com"
+                    <a
+                      class="text-field"
+                      href="mailto:Mohammadrez78051@gmail.com"
                       >Mohammadrez78051@gmail.com</a
                     >
                   </div>
@@ -895,9 +930,17 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex justify-content-between align-items-center">
             <i class="fa fa-circle-check text-primary ml-2"></i>
-            <p class="m-0 d-flex justify-content-between align-items-center">پیام شما با موفقیت ارسال شد</p>
+            <p class="m-0 d-flex justify-content-between align-items-center">
+              پیام شما با موفقیت ارسال شد
+            </p>
           </div>
-          <span><i id="close-notif-btn" style="cursor: pointer; font-size:larger ;" class="fa fa-close mr-5"></i></span>
+          <span
+            ><i
+              id="close-notif-btn"
+              style="cursor: pointer; font-size: larger"
+              class="fa fa-close mr-5"
+            ></i
+          ></span>
         </div>
       </div>
     </footer>
@@ -948,7 +991,7 @@
           $("#notification-container").fadeIn(3000).delay(1000).fadeOut(1000);
         });
         $("#close-notif-btn").click((event) => {
-          $("#notification-container").hide('fast');
+          $("#notification-container").hide("fast");
         });
       });
     </script>
